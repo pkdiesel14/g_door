@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # Imports
-from tkinter import *
+#from tkinter import *
 import RPi.GPIO as GPIO
 import time
 import sys
