@@ -1,20 +1,20 @@
 #!/usr/bin/python
 # Imports
-import tkinter
+from tkinter import *
 import RPi.GPIO as GPIO
 import time
 import sys
 from subprocess import call
 
-# create a gui window for fun before proceeding
-top = Tkinter.Tk()
-hello=Tkinter.Label(top, text='Welcome to Garage Door')
+"""# create a gui window for fun before proceeding
+top = Tk()
+hello=Label(top, text='Welcome to Garage Door')
 hello.pack()
-quit=Tkinter.Button(top, text='QUIT',
+quit=Button(top, text='QUIT',
                     command=top.quit, bg='red', fg='white')
-quit.pack(fill=Tkinter.X, expand=1)
-Tkinter.mainloop()
-
+quit.pack(fill=X, expand=1)
+mainloop()
+"""
 # Basic GPIO settings
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
