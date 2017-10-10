@@ -1,9 +1,19 @@
 #!/usr/bin/python
 # Imports
+import tkinter
 import RPi.GPIO as GPIO
 import time
 import sys
 from subprocess import call
+
+# create a gui window for fun before proceeding
+top = Tkinter.Tk()
+hello=Tkinter.Label(top, text='Welcome to Garage Door')
+hello.pack()
+quit=Tkinter.Button(top, text='QUIT',
+                    command=top.quit, bg='red', fg='white')
+quit.pack(fill=Tkinter.X, expand=1)
+Tkinter.mainloop()
 
 # Basic GPIO settings
 GPIO.setmode(GPIO.BCM)
@@ -89,9 +99,9 @@ while(var1 != 'q'):
         GPIO.output(9, GPIO.HIGH)
     elif var1 == 'c' or var1 == 'C':
         print("Moving Door 2 !!!")
-        GPIO.output(9, GPIO.LOW)
+        GPIO.output(11, GPIO.LOW)
         time.sleep(2)
-        GPIO.output(9, GPIO.HIGH)
+        GPIO.output(11, GPIO.HIGH)
     elif var1 == 'd' or var1 == 'D':
         print("D has been selected")
     elif var1 == 'e' or var1 == 'E':
